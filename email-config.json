@@ -1,0 +1,6 @@
+{
+  "MJ_APIKEY_PUBLIC": "34c0e4995391b083b6553f69655b711d",
+  "MJ_APIKEY_PRIVATE" : "5568486d02c34f8c733e570d9253e91b",
+  "RedisAddr" : "localhost:6379",
+  "RedisPassword" : ""
+}

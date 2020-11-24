@@ -7,6 +7,7 @@ import (
 	mailjet "github.com/mailjet/mailjet-apiv3-go/v3"
 	"io/ioutil"
 	"log"
+	"strings"
 	"time"
 )
 
@@ -45,6 +46,12 @@ func (b Sender) receiveTask(key string) string {
 }
 
 func handleTask(value string) {
+
+	delimiter := "|"
+
+	email := strings.Split(value, delimiter)[0]
+	name := strings.Join(strings.Split(value, delimiter)[1:], delimiter)
+
 	apiKey := config.Publickey
 	secretKey := config.PrivateKey
 	mj := mailjet.NewMailjetClient(apiKey, secretKey)
@@ -56,13 +63,13 @@ func handleTask(value string) {
 			},
 			To: &mailjet.RecipientsV31{
 				mailjet.RecipientV31 {
-					Email: value,
-					Name: "passenger 1",
+					Email: email,
+					Name: name,
 				},
 			},
 			Subject: "Welcome to Chowder!",
-			TextPart: "Dear user , welcome to Chowder! May the delivery force be with you!",
-			HTMLPart: "<h3>Dear passenger 1, welcome to <a href=\"https://www.mailjet.com/\">Mailjet</a>!</h3><br />May the delivery force be with you!",
+			TextPart: "Dear "+name+" , welcome to Chowder! May the delivery force be with you!",
+			HTMLPart: "<h3>Dear "+name+", welcome to <a href=\"https://www.mailjet.com/\">Mailjet</a>!</h3><br />May the delivery force be with you!",
 		},
 	}
 	messages := mailjet.MessagesV31{Info: messagesInfo }
@@ -98,3 +105,4 @@ func ReadConf(conf string) AppConfig {
 	}
 	return obj
 }
+
