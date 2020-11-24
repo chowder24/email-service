@@ -12,10 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="137d9195-0ac8-41b7-b517-c2a57598b282" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/email-config.json" beforeDir="false" afterPath="$PROJECT_DIR$/email-config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <list id="c85dff10-2e4c-4abb-b72c-0d24a8cf36af" name="Revert &quot;first commit&quot;" comment="Revert &quot;first commit&quot;&#10;&#10;This reverts commit e0fcb849" />
     <option name="SHOW_DIALOG" value="false" />
