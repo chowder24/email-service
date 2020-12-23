@@ -37,7 +37,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
-        port: 22
+        port: ${{ secrets.PORT }}
         key: ${{ secrets.SERVERKEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         source: "email-delivery-service,email-config.json"         
@@ -48,7 +48,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USER }}
-        port: 22
+        port: ${{ secrets.PORT }}
         key: ${{ secrets.SERVERKEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         source: "email-delivery-service,email-config.json"         
